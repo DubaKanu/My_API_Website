@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather App</h1>
+        </header>
+        <main>
+            <form method="POST" action="/">
+                <input type="text" name="city" placeholder="Enter city name" required>
+                <button type="submit">Search</button>
+            </form>
+
+            {% if weather_data %}
+            <div class="weather-info">
+                <h2>{{ weather_data["name"] }}</h2>
+                <p class="local-time">{{ weather_data["local_time"] }}</p>
+                <p class="temp">{{ weather_data["temp"] }}°C</p>
+                <p class="condition">{{ weather_data["condition"] }}</p>
+                <p>Humidity: {{ weather_data["humidity"] }}%</p>
+                <p>Wind Speed: {{ weather_data["wind_speed"] }} m/s</p>
+                <button class="fahrenheit-btn">Switch to Fahrenheit</button>
+            </div>
+            {% elif request.method == 'POST' %}
+            <p class="error">City not found. Please try again.</p>
+            {% endif %}
+        </main>
+    </div>
+</body>
+</html>

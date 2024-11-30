@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #1e90ff;
+}
+
+form input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 2px solid #1e90ff;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #4682b4;
+}
+
+.weather-info {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e0f7fa;
+    border-radius: 8px;
+}
+
+.weather-info h2 {
+    font-size: 32px;
+    color: #008b8b;
+}
+
+.local-time {
+    font-size: 18px;
+    color: #2f4f4f;
+}
+
+.temp {
+    font-size: 40px;
+    color: #ff6347;
+}
+
+.condition {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+button.fahrenheit-btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.fahrenheit-btn:hover {
+    background-color: #ff4500;
+}
+
+.error {
+    color: red;
+    font-size: 18px;
+    margin-top: 20px;
+}
