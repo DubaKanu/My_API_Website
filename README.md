@@ -89,6 +89,7 @@ Once deployed, the application can be accessed via:
 Demo Video:
 Here is a short demo video showcasing how to use the application both locally and through the load balancer. It demonstrates the following:
 
+
 •	How to search for cities from different countries around the world
 
 •	How to know the current weather, current time, humidity, wind speed, temperature, and Fahrenheit from those cities
@@ -98,6 +99,7 @@ Here is a short demo video showcasing how to use the application both locally an
 
 
 Challenges Faced:
+
 •	API Errors: Addressed scenarios like invalid city names or API downtime with user-friendly error messages.
 
 •	Load Balancer Configuration: Learning to set up traffic distribution between servers was challenging but rewarding.
