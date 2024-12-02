@@ -42,43 +42,61 @@ You can access the live application via this link: Weather App
 
 1. Web Server Deployment
 •	The application is deployed on each web server, with Nginx configured to serve the app from the /var/www/app directory.
+
 •	Both servers are set up to handle requests on port 3000.
 
+
 2. Load Balancer Configuration
+
 •	The load balancer is configured using Nginx to distribute traffic evenly between Web01 and Web02 using the round-robin algorithm.
+
 
 How the Application Works
 
 1. Fetching Weather Data
 •	The app fetches weather information when a city is searched using the /weather endpoint:
+
 const url = `${BASE_URL}/weather?q=${encodeURIComponent(city)}&appid=${API_KEY}&units=metric`;  
 •	Data such as temperature, humidity, wind speed, and conditions are displayed dynamically.
 
+
 2. Error Handling
 •	If a city is not found or there’s an API issue, an error message is displayed to guide the user.
+
 
 How to Access the Application
 Once deployed, the application can be accessed via:
 
 •	Web Server 1: http://54.90.179.62:3000
+
 •	Web Server 2: http://18.214.99.45:3000
+
 •	Load Balancer: https://www.josephinesuccess.tech
+
 
 Demo Video:
 Here is a short demo video showcasing how to use the application both locally and through the load balancer. It demonstrates the following:
+
 •	How to search for cities from different countries around the world
+
 •	How to know the current weather, current time, humidity, wind speed, temperature, and Fahrenheit from those cities
+
 •	https://youtu.be/OrgwmYbB39M
 
 Challenges Faced
 •	API Errors: Addressed scenarios like invalid city names or API downtime with user-friendly error messages.
+
 •	Load Balancer Configuration: Learning to set up traffic distribution between servers was challenging but rewarding.
+
 •	Scalability: Ensured the app handles increased user requests without delays by leveraging a load balancer.
 
 
-Credits
+
+Credits:
 •	OpenWeatherMap API: For real-time weather data.
+
 •	Hosting: The application is deployed online for user accessibility.
+
 
 
 
