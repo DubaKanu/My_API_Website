@@ -62,15 +62,13 @@ Once deployed, the application can be accessed via:
 
 . Web Server 1: http://54.90.179.62:3000
 . Web Server 2: http://18.214.99.45:3000
-. Load Balancer: Weather Application
+. Load Balancer: https://www.josephinesuccess.tech
 
-Demo Video
+Demo Video:
 Here is a short demo video showcasing how to use the application both locally and through the load balancer. It demonstrates the following:
 . How to search for cities from different countries around the world
 . How to know the current weather, current time, humidity, wind speed, temperature, and Fahrenheit from those cities
-. My Weather App Demo Video
-
-
+. https://youtu.be/OrgwmYbB39M
 
 Challenges Faced
 . API Errors: Addressed scenarios like invalid city names or API downtime with user-friendly error messages.
