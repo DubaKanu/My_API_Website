@@ -1,7 +1,9 @@
 Weather Application
 
+
 Overview
 The Weather Application provides real-time weather updates by fetching data from the OpenWeatherMap API. Users can search for weather conditions in any city worldwide and get details such as temperature, weather conditions, humidity, and wind speed. To ensure performance and scalability, the application is hosted on two web servers with a load balancer managing traffic distribution.
+
 
 Features
 
@@ -12,26 +14,31 @@ Hosted on multiple web servers with a load balancer for better performance.
 API Used
 OpenWeatherMap API
 
+
 Base URL: https://api.openweathermap.org/data/2.5
 Endpoints Used:
 GET /weather?q={city name}&appid={API key}: Fetches weather details for a specified city.
 For more details on the API, visit the OpenWeatherMap API Documentation.
+
 
 Installation Instructions
 1. Clone the repository: 
  git clone https://github.com/DubaKanu/Weather-App.git  
 cd Weather-App  
 
+
 2. Set up environment variables:
 Create a .env file in the root directory and add your OpenWeatherMap API key:
 API_KEY=your_openweathermap_api_key  
+
 
 3. Start the application:
 If deployed locally, run:
 npm start  
 The app will run at http://localhost:3000.
 
- Deployment
+ 
+Deployment
 The application is deployed on two web servers (Web01 and Web02) with a load balancer managing traffic between them.
 
 Web01: http://54.90.179.62:3000
@@ -51,6 +58,7 @@ You can access the live application via this link: Weather App
 •	The load balancer is configured using Nginx to distribute traffic evenly between Web01 and Web02 using the round-robin algorithm.
 
 
+
 How the Application Works
 
 1. Fetching Weather Data
@@ -64,6 +72,7 @@ const url = `${BASE_URL}/weather?q=${encodeURIComponent(city)}&appid=${API_KEY}&
 •	If a city is not found or there’s an API issue, an error message is displayed to guide the user.
 
 
+
 How to Access the Application
 Once deployed, the application can be accessed via:
 
@@ -72,6 +81,7 @@ Once deployed, the application can be accessed via:
 •	Web Server 2: http://18.214.99.45:3000
 
 •	Load Balancer: https://www.josephinesuccess.tech
+
 
 
 Demo Video:
@@ -89,6 +99,7 @@ Challenges Faced
 •	Load Balancer Configuration: Learning to set up traffic distribution between servers was challenging but rewarding.
 
 •	Scalability: Ensured the app handles increased user requests without delays by leveraging a load balancer.
+
 
 
 
