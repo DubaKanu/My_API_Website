@@ -85,6 +85,7 @@ Once deployed, the application can be accessed via:
 
 
 
+
 Demo Video:
 Here is a short demo video showcasing how to use the application both locally and through the load balancer. It demonstrates the following:
 
@@ -95,12 +96,14 @@ Here is a short demo video showcasing how to use the application both locally an
 •	https://youtu.be/OrgwmYbB39M
 
 
-Challenges Faced
+
+Challenges Faced:
 •	API Errors: Addressed scenarios like invalid city names or API downtime with user-friendly error messages.
 
 •	Load Balancer Configuration: Learning to set up traffic distribution between servers was challenging but rewarding.
 
 •	Scalability: Ensured the app handles increased user requests without delays by leveraging a load balancer.
+
 
 
 
