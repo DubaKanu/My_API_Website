@@ -1,1 +1,5 @@
-# My_API_Website
+To deploy the Weather App, I began by uploading the application files (`index.html`, `Style.css`, and `Script.js`) to the `/var/www/app` directory on each web server. I then configured Nginx on both servers by updating the default configuration file to set the document root to `/var/www/app`, ensuring the app could serve its content properly. After saving the changes, I restarted Nginx to apply the new configuration. 
+
+For the load balancer, I logged into the server and modified its Nginx configuration to define an upstream block pointing to the two web servers. I configured the load balancer to forward incoming requests to these servers, ensuring proper headers were passed along with each request. Once the changes were saved, I restarted Nginx on the load balancer. 
+
+To verify the setup, I tested the application by accessing it through the load balancer's IP address and confirmed that it loaded correctly. I also monitored the Nginx access logs on both web servers to ensure traffic was distributed evenly between them. Finally, I validated the configurations using `nginx -t` and resolved any errors identified in the logs. This thorough and systematic approach ensured a successful deployment and a functioning load-balancing configuration.
