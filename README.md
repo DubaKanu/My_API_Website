@@ -1,6 +1,5 @@
 Weather Application
 
-
 Overview
 The Weather Application provides real-time weather updates by fetching data from the OpenWeatherMap API. Users can search for weather conditions in any city worldwide and get details such as temperature, weather conditions, humidity, and wind speed. To ensure performance and scalability, the application is hosted on two web servers with a load balancer managing traffic distribution.
 
@@ -34,30 +33,15 @@ API_KEY=your_openweathermap_api_key
 
 3. Start the application:
 If deployed locally, run:
-npm start  
-The app will run at http://localhost:3000.
+npm start
+The app will run http://localhost:5500
 
  
 Deployment
 The application is deployed on two web servers (Web01 and Web02) with a load balancer managing traffic between them.
 
-Web01: http://54.90.179.62:3000
-Web02: http://18.214.99.45:3000
-
-Access the Application Online
-You can access the live application via this link: Weather App
-
-1. Web Server Deployment
-•	The application is deployed on each web server, with Nginx configured to serve the app from the /var/www/app directory.
-
-•	Both servers are set up to handle requests on port 3000.
-
-
-2. Load Balancer Configuration
-
-•	The load balancer is configured using Nginx to distribute traffic evenly between Web01 and Web02 using the round-robin algorithm.
-
-
+Web01: http://3.80.204.65:5500/
+Web02: http://3.80.117.108:5500/
 
 How the Application Works
 
@@ -71,20 +55,14 @@ const url = `${BASE_URL}/weather?q=${encodeURIComponent(city)}&appid=${API_KEY}&
 2. Error Handling
 •	If a city is not found or there’s an API issue, an error message is displayed to guide the user.
 
-
-
 How to Access the Application
 Once deployed, the application can be accessed via:
 
-•	Web Server 1: http://54.90.179.62:3000
+•	Web Server 1: http://localhost:5500
 
-•	Web Server 2: http://18.214.99.45:3000
+•	Web Server 2: http://localhost:5500
 
 •	Load Balancer: https://www.josephinesuccess.tech
-
-
-
-
 
 Demo Video:
 Here is a short demo video showcasing how to use the application both locally and through the load balancer. It demonstrates the following:
@@ -105,10 +83,6 @@ Challenges Faced:
 •	Load Balancer Configuration: Learning to set up traffic distribution between servers was challenging but rewarding.
 
 •	Scalability: Ensured the app handles increased user requests without delays by leveraging a load balancer.
-
-
-
-
 
 
 Credits:
