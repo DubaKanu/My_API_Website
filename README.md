@@ -40,8 +40,8 @@ The app will run http://localhost:5500
 Deployment
 The application is deployed on two web servers (Web01 and Web02) with a load balancer managing traffic between them.
 
-Web01: http://3.80.204.65:5500/
-Web02: http://3.80.117.108:5500/
+Web01: 3.80.204.65
+Web02: 3.80.117.108
 
 How the Application Works
 
